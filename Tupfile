@@ -1,0 +1,2 @@
+# Tupfile
+: foreach src/*.lua |> luajit -b %f %o |> build/%B
