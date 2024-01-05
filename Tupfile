@@ -1,2 +1,3 @@
 # Tupfile
-: foreach src/*.lua |> luajit -b %f %o |> build/%B
+: foreach src/*.lua |> lua %f build/%B |> build/%B
+: build/*.lua |> lua %f |> %o
